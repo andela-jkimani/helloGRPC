@@ -1,0 +1,16 @@
+syntax = 'proto3';
+
+package foo;
+
+service micro {
+    rpc GetAge (Person) returns (Feedback);
+}
+
+message Person {
+    string name = 1;
+    int32 age = 2;
+}
+
+message Feedback {
+    int32 age = 1;
+}
